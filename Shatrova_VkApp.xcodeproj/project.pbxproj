@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		184E473A1F6AC3E6004DCF15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E47391F6AC3E6004DCF15 /* AppDelegate.swift */; };
-		184E473C1F6AC3E6004DCF15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E473B1F6AC3E6004DCF15 /* ViewController.swift */; };
 		184E473F1F6AC3E6004DCF15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E473D1F6AC3E6004DCF15 /* Main.storyboard */; };
 		184E47421F6AC3E6004DCF15 /* Shatrova_VkApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184E47401F6AC3E6004DCF15 /* Shatrova_VkApp.xcdatamodeld */; };
 		184E47441F6AC3E6004DCF15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184E47431F6AC3E6004DCF15 /* Assets.xcassets */; };
 		184E47471F6AC3E6004DCF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E47451F6AC3E6004DCF15 /* LaunchScreen.storyboard */; };
+		184E474F1F6AC430004DCF15 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		184E47361F6AC3E6004DCF15 /* Shatrova_VkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shatrova_VkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184E47391F6AC3E6004DCF15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		184E473B1F6AC3E6004DCF15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		184E473E1F6AC3E6004DCF15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184E47411F6AC3E6004DCF15 /* Shatrova_VkApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shatrova_VkApp.xcdatamodel; sourceTree = "<group>"; };
 		184E47431F6AC3E6004DCF15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184E47461F6AC3E6004DCF15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184E47481F6AC3E6004DCF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				184E47391F6AC3E6004DCF15 /* AppDelegate.swift */,
-				184E473B1F6AC3E6004DCF15 /* ViewController.swift */,
+				184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */,
 				184E473D1F6AC3E6004DCF15 /* Main.storyboard */,
 				184E47431F6AC3E6004DCF15 /* Assets.xcassets */,
 				184E47451F6AC3E6004DCF15 /* LaunchScreen.storyboard */,
@@ -140,8 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				184E47421F6AC3E6004DCF15 /* Shatrova_VkApp.xcdatamodeld in Sources */,
-				184E473C1F6AC3E6004DCF15 /* ViewController.swift in Sources */,
 				184E473A1F6AC3E6004DCF15 /* AppDelegate.swift in Sources */,
+				184E474F1F6AC430004DCF15 /* LoginScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
