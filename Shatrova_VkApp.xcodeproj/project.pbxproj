@@ -13,6 +13,7 @@
 		184E47441F6AC3E6004DCF15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184E47431F6AC3E6004DCF15 /* Assets.xcassets */; };
 		184E47471F6AC3E6004DCF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E47451F6AC3E6004DCF15 /* LaunchScreen.storyboard */; };
 		184E474F1F6AC430004DCF15 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */; };
+		184E47531F6C2AD6004DCF15 /* RegNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		184E47461F6AC3E6004DCF15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184E47481F6AC3E6004DCF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegNewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				184E47391F6AC3E6004DCF15 /* AppDelegate.swift */,
 				184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */,
+				184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */,
 				184E473D1F6AC3E6004DCF15 /* Main.storyboard */,
 				184E47431F6AC3E6004DCF15 /* Assets.xcassets */,
 				184E47451F6AC3E6004DCF15 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				184E47421F6AC3E6004DCF15 /* Shatrova_VkApp.xcdatamodeld in Sources */,
 				184E473A1F6AC3E6004DCF15 /* AppDelegate.swift in Sources */,
 				184E474F1F6AC430004DCF15 /* LoginScreenViewController.swift in Sources */,
+				184E47531F6C2AD6004DCF15 /* RegNewUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 				184E474D1F6AC3E6004DCF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
