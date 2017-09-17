@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import CustomUser
 
 class RegNewUserViewController: UIViewController {
 
@@ -33,7 +34,17 @@ class RegNewUserViewController: UIViewController {
         let userStoresPassword = userPasswordTextField.text
         let userRepeatsPassword = userRepeatPasswordTextField.text
         
+        if (userStoresEmail?.isEmpty)! || (userStoresPassword?.isEmpty)! || (userRepeatsPassword?.isEmpty)! {
+                customAlert(messageDisplay: "All fields are required.")
+            
+        } else if userRepeatsPassword != userStoresPassword {
+            customAlert(messageDisplay: "Passwords don't match.")
+        }
         
+        var newCustomUser: customUser = customUser()
+        newCustomUser.customEmail = userStoresEmail!
+        newCustomUser.customPassword = userStoresPassword!
+        newCustomUser.customPassword = userStoresPassword!
         
     }
     
