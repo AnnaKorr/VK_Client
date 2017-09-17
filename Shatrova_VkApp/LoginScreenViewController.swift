@@ -10,11 +10,16 @@ import UIKit
 
 class LoginScreenViewController: UIViewController {
 
+    @IBOutlet weak var userEmailTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    @IBAction func newUserSignUp(_ sender: UIButton) {
+    }
     
 
     

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -95,6 +96,7 @@
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
+                                            <action selector="newUserSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crA-Al-5Wz"/>
                                             <segue destination="tvV-HH-CXc" kind="presentation" identifier="go2Registration" id="mSb-H7-zbI"/>
                                         </connections>
                                     </button>
@@ -136,6 +138,10 @@
                             <constraint firstItem="MpM-yj-tN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cV0-Ki-bcK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="Vve-Zg-IcX" id="qU6-se-iC5"/>
+                        <outlet property="userPasswordTextField" destination="bKB-Ie-YrI" id="Ag5-YK-Qdv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,6 +227,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="newUserSignUp:" destination="tvV-HH-CXc" eventType="touchUpInside" id="2k5-rY-d4J"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-qh-fGN">
                                         <rect key="frame" x="128" y="41" width="120" height="21"/>
@@ -235,7 +244,8 @@
                                         </constraints>
                                         <state key="normal" title="I Have Account"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="iHaveAccount" id="R2T-7y-Hp2"/>
+                                            <action selector="iHaveAccount:" destination="tvV-HH-CXc" eventType="touchUpInside" id="mgq-gZ-Hhb"/>
+                                            <segue destination="5hG-CP-hF6" kind="show" id="hED-SI-mpp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -280,10 +290,63 @@
                             <constraint firstItem="KkM-9y-1Wl" firstAttribute="leading" secondItem="XXV-rg-Yg4" secondAttribute="leading" id="SDi-3w-rY9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="zmN-cT-0O0" id="Qmi-Hr-cdF"/>
+                        <outlet property="userPasswordTextField" destination="6Xc-B0-GGu" id="kvI-Ek-Ebu"/>
+                        <outlet property="userRepeatPasswordTextField" destination="reX-SY-Xlt" id="qFP-lT-iR8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtM-w1-Xen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23.199999999999999" y="713.79310344827593"/>
+            <point key="canvasLocation" x="833" y="38"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lCt-Of-83j">
+            <objects>
+                <viewController id="5hG-CP-hF6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z0z-b3-6eI"/>
+                        <viewControllerLayoutGuide type="bottom" id="P5c-bQ-rhd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QMM-AP-rr4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my0-4c-V0d">
+                                <rect key="frame" x="147" y="318" width="81" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cea-ER-ADm"/>
+                                    <constraint firstAttribute="width" constant="81" id="of3-Ju-rWO"/>
+                                </constraints>
+                                <state key="normal" title="Ok!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="BjP-tr-dYP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Try Again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-Hj-ckx">
+                                <rect key="frame" x="99" y="232" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="my0-4c-V0d" firstAttribute="centerX" secondItem="DwQ-Hj-ckx" secondAttribute="centerX" id="GgJ-Jv-iqY"/>
+                            <constraint firstItem="DwQ-Hj-ckx" firstAttribute="top" secondItem="Z0z-b3-6eI" secondAttribute="bottom" constant="212" id="H3H-u3-KTP"/>
+                            <constraint firstItem="my0-4c-V0d" firstAttribute="top" secondItem="DwQ-Hj-ckx" secondAttribute="bottom" constant="65" id="MWe-Kt-URN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DwQ-Hj-ckx" secondAttribute="trailing" constant="84" id="Oer-WM-Thu"/>
+                            <constraint firstItem="DwQ-Hj-ckx" firstAttribute="leading" secondItem="QMM-AP-rr4" secondAttribute="leadingMargin" constant="83" id="RNS-zH-cgH"/>
+                            <constraint firstItem="my0-4c-V0d" firstAttribute="top" secondItem="DwQ-Hj-ckx" secondAttribute="bottom" constant="65" id="jFq-Cf-XXN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eox-0r-YEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="769.56521739130437"/>
         </scene>
     </scenes>
 </document>
