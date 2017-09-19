@@ -46,6 +46,8 @@ class RegNewUserViewController: UIViewController {
         newCustomUser.customPassword = userStoresPassword!
         newCustomUser.customPassword = userStoresPassword!
         
+        
+        
     }
     
     
