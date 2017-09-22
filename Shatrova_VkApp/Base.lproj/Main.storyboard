@@ -139,6 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="customScrollView" destination="MpM-yj-tN8" id="04N-6o-oI7"/>
                         <outlet property="userEmailTextField" destination="Vve-Zg-IcX" id="qU6-se-iC5"/>
                         <outlet property="userPasswordTextField" destination="bKB-Ie-YrI" id="Ag5-YK-Qdv"/>
                     </connections>

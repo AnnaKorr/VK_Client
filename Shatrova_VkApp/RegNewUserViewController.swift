@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import CustomUser
 
 class RegNewUserViewController: UIViewController {
 
@@ -46,7 +45,7 @@ class RegNewUserViewController: UIViewController {
         newCustomUser.customPassword = userStoresPassword!
         newCustomUser.customPassword = userStoresPassword!
         
-        
+
         
     }
     
@@ -55,7 +54,7 @@ class RegNewUserViewController: UIViewController {
     }
     
     func customAlert(messageDisplay: String) {
-        var messageTitle = UIAlertController(title: "Alert", message: messageDisplay, preferredStyle: UIAlertControllerStyle.alert)
+        let messageTitle = UIAlertController(title: "Alert", message: messageDisplay, preferredStyle: UIAlertControllerStyle.alert)
         let tapOkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         messageTitle.addAction(tapOkAction)
         self.present(messageTitle, animated: true, completion: nil)

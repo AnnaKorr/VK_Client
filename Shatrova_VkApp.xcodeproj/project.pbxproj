@@ -15,9 +15,11 @@
 		184E474F1F6AC430004DCF15 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */; };
 		184E47531F6C2AD6004DCF15 /* RegNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */; };
 		184E47571F6ED9BA004DCF15 /* CustomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E47561F6ED9BA004DCF15 /* CustomUser.swift */; };
+		3A6FEDD41DBC3B5497433D82 /* Pods_Shatrova_VkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2B12FDA3B624C90E510B5A /* Pods_Shatrova_VkApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18047A651F71C05D0044B4E5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Library/Developer/Xcode/DerivedData/Shatrova_VkApp-cohcgtnxczusrjgduhwnjfwhbmmr/Build/Products/Debug-iphonesimulator/Parse/Parse.framework"; sourceTree = "<group>"; };
 		184E47361F6AC3E6004DCF15 /* Shatrova_VkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shatrova_VkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184E47391F6AC3E6004DCF15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184E473E1F6AC3E6004DCF15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,9 @@
 		184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegNewUserViewController.swift; sourceTree = "<group>"; };
 		184E47561F6ED9BA004DCF15 /* CustomUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUser.swift; sourceTree = "<group>"; };
+		2E6C3C7AA1A3C619269ECA1E /* Pods-Shatrova_VkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shatrova_VkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp.release.xcconfig"; sourceTree = "<group>"; };
+		3C2B12FDA3B624C90E510B5A /* Pods_Shatrova_VkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shatrova_VkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80C58244ADB00B4BBAE09C2 /* Pods-Shatrova_VkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shatrova_VkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6FEDD41DBC3B5497433D82 /* Pods_Shatrova_VkApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18047A641F71C05D0044B4E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18047A651F71C05D0044B4E5 /* Parse.framework */,
+				3C2B12FDA3B624C90E510B5A /* Pods_Shatrova_VkApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		184E472D1F6AC3E6004DCF15 = {
 			isa = PBXGroup;
 			children = (
 				184E47381F6AC3E6004DCF15 /* Shatrova_VkApp */,
 				184E47371F6AC3E6004DCF15 /* Products */,
+				18047A641F71C05D0044B4E5 /* Frameworks */,
+				EAA319A58CF4A626E219A701 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +90,15 @@
 			path = Shatrova_VkApp;
 			sourceTree = "<group>";
 		};
+		EAA319A58CF4A626E219A701 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A80C58244ADB00B4BBAE09C2 /* Pods-Shatrova_VkApp.debug.xcconfig */,
+				2E6C3C7AA1A3C619269ECA1E /* Pods-Shatrova_VkApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184E474B1F6AC3E6004DCF15 /* Build configuration list for PBXNativeTarget "Shatrova_VkApp" */;
 			buildPhases = (
+				2ADCC89B1596D664CD2ED013 /* [CP] Check Pods Manifest.lock */,
 				184E47321F6AC3E6004DCF15 /* Sources */,
 				184E47331F6AC3E6004DCF15 /* Frameworks */,
 				184E47341F6AC3E6004DCF15 /* Resources */,
+				0EB046241C69A93500E9662A /* [CP] Embed Pods Frameworks */,
+				EA6B805D66634ECCAB6214D5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +168,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EB046241C69A93500E9662A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2ADCC89B1596D664CD2ED013 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shatrova_VkApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA6B805D66634ECCAB6214D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		184E47321F6AC3E6004DCF15 /* Sources */ = {
@@ -272,6 +352,7 @@
 		};
 		184E474C1F6AC3E6004DCF15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A80C58244ADB00B4BBAE09C2 /* Pods-Shatrova_VkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Shatrova_VkApp/Info.plist;
@@ -284,8 +365,10 @@
 		};
 		184E474D1F6AC3E6004DCF15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E6C3C7AA1A3C619269ECA1E /* Pods-Shatrova_VkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Shatrova_VkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-78.Shatrova-VkApp";
