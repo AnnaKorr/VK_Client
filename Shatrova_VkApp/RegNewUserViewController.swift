@@ -14,16 +14,11 @@ class RegNewUserViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userRepeatPasswordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -40,18 +35,13 @@ class RegNewUserViewController: UIViewController {
             customAlert(messageDisplay: "Passwords don't match.")
         }
         
-        var newCustomUser: customUser = customUser()
-        newCustomUser.customEmail = userStoresEmail!
-        newCustomUser.customPassword = userStoresPassword!
-        newCustomUser.customPassword = userStoresPassword!
-        
-
         
     }
     
     
     @IBAction func iHaveAccount(_ sender: UIButton) {
     }
+    
     
     func customAlert(messageDisplay: String) {
         let messageTitle = UIAlertController(title: "Alert", message: messageDisplay, preferredStyle: UIAlertControllerStyle.alert)
