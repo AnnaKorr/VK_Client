@@ -14,6 +14,7 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,8 @@ class LoginScreenViewController: UIViewController {
                                                object: nil)
         
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.keyboardShows(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               selector: #selector(self.keyboardHides(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
         
     }
@@ -44,7 +45,7 @@ class LoginScreenViewController: UIViewController {
         super.viewWillDisappear(true)
         
         NotificationCenter.default.removeObserver(self,
-                                                  name: NSNotification.Name.UIKeyboardWillHide,
+                                                  name: NSNotification.Name.UIKeyboardWillShow,
                                                   object: nil)
         
         NotificationCenter.default.removeObserver(self,
@@ -53,6 +54,10 @@ class LoginScreenViewController: UIViewController {
         
     }
     
+    
+    @IBAction func existUserLogIn(_ sender: UIButton) {
+        
+    }
     
     @objc func hideKeyboard() {
         self.customScrollView?.endEditing(true)

@@ -88,6 +88,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="existUserLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqf-84-CHX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-lj-DHb">
                                         <rect key="frame" x="147" y="372" width="81" height="30"/>
@@ -292,6 +295,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="regScrollView" destination="KkM-9y-1Wl" id="HKv-bA-UfK"/>
                         <outlet property="userEmailTextField" destination="zmN-cT-0O0" id="Qmi-Hr-cdF"/>
                         <outlet property="userPasswordTextField" destination="6Xc-B0-GGu" id="kvI-Ek-Ebu"/>
                         <outlet property="userRepeatPasswordTextField" destination="reX-SY-Xlt" id="qFP-lT-iR8"/>
@@ -299,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtM-w1-Xen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="38"/>
+            <point key="canvasLocation" x="415" y="818"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lCt-Of-83j">
@@ -347,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eox-0r-YEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="769.56521739130437"/>
+            <point key="canvasLocation" x="-350" y="819"/>
         </scene>
     </scenes>
 </document>

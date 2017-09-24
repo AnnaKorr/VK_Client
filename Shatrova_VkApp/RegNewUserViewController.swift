@@ -13,12 +13,15 @@ class RegNewUserViewController: UIViewController {
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userRepeatPasswordTextField: UITextField!
+    @IBOutlet weak var regScrollView: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let regHideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(self.regKeyboardHide))
+        regScrollView?.addGestureRecognizer(regHideKeyboardGesture)
+        
     }
     
     
@@ -39,7 +42,31 @@ class RegNewUserViewController: UIViewController {
     }
     
     
-    @IBAction func iHaveAccount(_ sender: UIButton) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(regKeyboardShows),
+                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(regKeyboardHides(notification:)), name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name.UIKeyboardWillShow,
+                                                  object: nil)
+        
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name.UIKeyboardWillHide,
+                                                  object: nil)
+        
     }
     
     
@@ -50,6 +77,31 @@ class RegNewUserViewController: UIViewController {
         self.present(messageTitle, animated: true, completion: nil)
         
     }
+    
+    
+    @objc func regKeyboardHide() {
+        self.regScrollView?.endEditing(true)
+    }
 
-
+  
+    @objc func regKeyboardShows(notification: Notification) {
+        let regCustomInfo = notification.userInfo! as NSDictionary
+        let regKeyBoardSize = (regCustomInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
+        let regCustomContentInsets = UIEdgeInsetsMake(0.0, 0.0, regKeyBoardSize.height, 0.0)
+        
+        self.regScrollView?.contentInset = regCustomContentInsets
+        regScrollView?.scrollIndicatorInsets = regCustomContentInsets
+        
+    }
+    
+    
+    @objc func regKeyboardHides(notification: Notification) {
+        let regCustomContentInsets = UIEdgeInsets()
+        regScrollView?.contentInset = regCustomContentInsets
+        regScrollView?.scrollIndicatorInsets = regCustomContentInsets
+    }
+    
+    
+    @IBAction func iHaveAccount(_ sender: UIButton) {
+    }
 }
