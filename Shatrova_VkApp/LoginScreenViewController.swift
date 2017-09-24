@@ -15,7 +15,6 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +55,12 @@ class LoginScreenViewController: UIViewController {
     
     
     @IBAction func existUserLogIn(_ sender: UIButton) {
+        let loginUserEmailTextField = userEmailTextField.text!
+        let loginUserPasswordTextField = userEmailTextField.text!
+        
+        if (loginUserEmailTextField.isEmpty) || (loginUserPasswordTextField.isEmpty) {
+            loginCustomAlert(messageDisplay: "All fields are required.")
+        }
         
     }
     
@@ -81,6 +86,15 @@ class LoginScreenViewController: UIViewController {
         let customContentInsets = UIEdgeInsets()
         customScrollView?.contentInset = customContentInsets
         customScrollView?.scrollIndicatorInsets = customContentInsets
+    }
+    
+    
+    func loginCustomAlert(messageDisplay: String) {
+        let loginMessageTitle = UIAlertController(title: "Alert", message: messageDisplay, preferredStyle: UIAlertControllerStyle.alert)
+        let tapOkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        loginMessageTitle.addAction(tapOkAction)
+        self.present(loginMessageTitle, animated: true, completion: nil)
+        
     }
 
     

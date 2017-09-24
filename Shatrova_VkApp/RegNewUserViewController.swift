@@ -32,10 +32,10 @@ class RegNewUserViewController: UIViewController {
         let userRepeatsPassword = userRepeatPasswordTextField.text
         
         if (userStoresEmail?.isEmpty)! || (userStoresPassword?.isEmpty)! || (userRepeatsPassword?.isEmpty)! {
-                customAlert(messageDisplay: "All fields are required.")
+                regCustomAlert(messageDisplay: "All fields are required.")
             
         } else if userRepeatsPassword != userStoresPassword {
-            customAlert(messageDisplay: "Passwords don't match.")
+            regCustomAlert(messageDisplay: "Passwords don't match.")
         }
         
         
@@ -70,7 +70,7 @@ class RegNewUserViewController: UIViewController {
     }
     
     
-    func customAlert(messageDisplay: String) {
+    func regCustomAlert(messageDisplay: String) {
         let messageTitle = UIAlertController(title: "Alert", message: messageDisplay, preferredStyle: UIAlertControllerStyle.alert)
         let tapOkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         messageTitle.addAction(tapOkAction)
