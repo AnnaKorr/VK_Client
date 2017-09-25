@@ -14,6 +14,7 @@
 		184E47471F6AC3E6004DCF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E47451F6AC3E6004DCF15 /* LaunchScreen.storyboard */; };
 		184E474F1F6AC430004DCF15 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */; };
 		184E47531F6C2AD6004DCF15 /* RegNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */; };
+		187655BA1F793556001B5C5E /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187655B91F793556001B5C5E /* VK_ios_sdk.framework */; };
 		3A6FEDD41DBC3B5497433D82 /* Pods_Shatrova_VkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2B12FDA3B624C90E510B5A /* Pods_Shatrova_VkApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		184E47481F6AC3E6004DCF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegNewUserViewController.swift; sourceTree = "<group>"; };
+		187655B91F793556001B5C5E /* VK_ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VK_ios_sdk.framework; path = "Pods/../build/Debug-iphoneos/VK-ios-sdk/VK_ios_sdk.framework"; sourceTree = "<group>"; };
 		2E6C3C7AA1A3C619269ECA1E /* Pods-Shatrova_VkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shatrova_VkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp.release.xcconfig"; sourceTree = "<group>"; };
 		3C2B12FDA3B624C90E510B5A /* Pods_Shatrova_VkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shatrova_VkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80C58244ADB00B4BBAE09C2 /* Pods-Shatrova_VkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shatrova_VkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187655BA1F793556001B5C5E /* VK_ios_sdk.framework in Frameworks */,
 				3A6FEDD41DBC3B5497433D82 /* Pods_Shatrova_VkApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +51,7 @@
 		18047A641F71C05D0044B4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				187655B91F793556001B5C5E /* VK_ios_sdk.framework */,
 				18047A651F71C05D0044B4E5 /* Parse.framework */,
 				3C2B12FDA3B624C90E510B5A /* Pods_Shatrova_VkApp.framework */,
 			);
@@ -173,9 +177,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,6 +358,10 @@
 			baseConfigurationReference = A80C58244ADB00B4BBAE09C2 /* Pods-Shatrova_VkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/VK-ios-sdk",
+				);
 				INFOPLIST_FILE = Shatrova_VkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-78.Shatrova-VkApp";
@@ -364,7 +375,10 @@
 			baseConfigurationReference = 2E6C3C7AA1A3C619269ECA1E /* Pods-Shatrova_VkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/VK-ios-sdk",
+				);
 				INFOPLIST_FILE = Shatrova_VkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-78.Shatrova-VkApp";

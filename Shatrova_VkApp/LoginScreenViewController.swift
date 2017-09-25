@@ -6,7 +6,8 @@
 //  Copyright © 2017 Korona. All rights reserved.
 //
 
-import UIKit
+import UIKit 
+import VK_ios_sdk
 
 class LoginScreenViewController: UIViewController {
 
