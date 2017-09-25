@@ -331,7 +331,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rFQ-Ug-3P9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdFirst" id="rFQ-Ug-3P9">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rFQ-Ug-3P9" id="OK7-gH-Kkx">
@@ -339,7 +339,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ylv-YD-Of4" kind="showDetail" id="arw-Zq-it4"/>
+                                    <segue destination="Ylv-YD-Of4" kind="showDetail" identifier="segueFromCell2Collection" id="arw-Zq-it4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -358,7 +358,7 @@
         <scene sceneID="4Iv-Ds-L0g">
             <objects>
                 <collectionViewController id="Ylv-YD-Of4" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="GeP-5s-4aa">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GeP-5s-4aa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -369,7 +369,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gID-WA-H8L">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionIdFirst-1" id="gID-WA-H8L">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -397,7 +397,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6oq-Qb-v7U">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdSecond" id="6oq-Qb-v7U">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6oq-Qb-v7U" id="gnB-D8-XLa">
@@ -405,7 +405,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="T3B-ik-biF" kind="show" id="Soh-gZ-DQR"/>
+                                    <segue destination="T3B-ik-biF" kind="show" identifier="segueFromCell2CellsList" id="Soh-gZ-DQR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -429,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GRA-dU-WDB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdSecond-2" id="GRA-dU-WDB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GRA-dU-WDB" id="krH-1X-pf1">
@@ -490,18 +490,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Xw0-QN-vcl" kind="show" id="0Tx-uQ-vjN"/>
-                        <segue destination="Zh5-Mp-HRX" kind="show" id="Fi6-Hs-wIw"/>
+                        <segue destination="Xw0-QN-vcl" kind="show" identifier="segueGo2Collection" id="0Tx-uQ-vjN"/>
+                        <segue destination="Zh5-Mp-HRX" kind="show" identifier="segueGo2CellsList" id="Fi6-Hs-wIw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bh-eL-lDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="855" y="38"/>
         </scene>
-        <!--View Controller-->
+        <!--tryAgainController-->
         <scene sceneID="lCt-Of-83j">
             <objects>
-                <viewController id="5hG-CP-hF6" sceneMemberID="viewController">
+                <viewController id="5hG-CP-hF6" userLabel="tryAgainController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z0z-b3-6eI"/>
                         <viewControllerLayoutGuide type="bottom" id="P5c-bQ-rhd"/>
@@ -521,7 +521,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="BjP-tr-dYP"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueGo2RegistrationAgain" id="BjP-tr-dYP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Try Again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-Hj-ckx">
