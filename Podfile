@@ -3,6 +3,5 @@ use_frameworks!
 
 target 'Shatrova_VkApp' do
 
-pod "VK-ios-sdk"
 
 end
