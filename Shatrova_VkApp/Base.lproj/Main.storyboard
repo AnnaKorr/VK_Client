@@ -106,6 +106,7 @@
                                         </state>
                                         <connections>
                                             <action selector="existUserLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqf-84-CHX"/>
+                                            <segue destination="MVq-g1-rtg" kind="show" identifier="go2Tabbar" id="PDC-Uq-Zzl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-lj-DHb">
@@ -167,6 +168,188 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Rga-US-7H3">
+            <objects>
+                <tableViewController id="aMC-QH-xNP" customClass="AlbumsListTableViewController" customModule="Shatrova_VkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n8R-C2-bPs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellAlbum" id="0PP-hq-eED">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0PP-hq-eED" id="jQG-6i-BIY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gwX-hG-c8C" kind="show" identifier="idCellCollection" id="ULH-6c-dND"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aMC-QH-xNP" id="TNf-Ai-XIc"/>
+                            <outlet property="delegate" destination="aMC-QH-xNP" id="iEb-K1-L3g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="PuI-5n-5TV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Slr-es-J3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2644" y="406"/>
+        </scene>
+        <!--Photo Collection View Controller-->
+        <scene sceneID="Jgq-1R-gAL">
+            <objects>
+                <collectionViewController id="gwX-hG-c8C" customClass="PhotoCollectionViewController" customModule="Shatrova_VkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CiG-oj-Uve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sqy-Er-QXm">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="idCellPhoto" id="d3J-J5-vZs">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gwX-hG-c8C" id="dQ6-a6-OVJ"/>
+                            <outlet property="delegate" destination="gwX-hG-c8C" id="i0V-1m-26F"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfF-cE-0Tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3436" y="405"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="1It-nW-gCo">
+            <objects>
+                <navigationController id="gIS-bT-qz5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Photos" image="iconCamera" id="857-b7-2Cj">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1Y-tP-DYb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aMC-QH-xNP" kind="relationship" relationship="rootViewController" id="AHR-uX-B6o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyf-xC-sNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="407"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="fiU-QB-Xce">
+            <objects>
+                <tableViewController id="bEv-aB-qqp" customClass="FriendsListTableViewController" customModule="Shatrova_VkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nUx-fJ-fSA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellFriend" id="cuD-ER-mIn">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cuD-ER-mIn" id="94c-aq-oF5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jMh-pR-ZpY" kind="showDetail" identifier="segue1" id="He2-js-Edd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bEv-aB-qqp" id="Jxf-fn-cHQ"/>
+                            <outlet property="delegate" destination="bEv-aB-qqp" id="Lhk-y3-6cM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="col-Hv-GGc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akM-1h-ngA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2644" y="-536"/>
+        </scene>
+        <!--List Of List Table View Controller-->
+        <scene sceneID="5U5-lT-4pR">
+            <objects>
+                <tableViewController id="jMh-pR-ZpY" customClass="ListOfListTableViewController" customModule="Shatrova_VkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KdT-EK-Gm6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellAfterFriend" id="FX7-4Z-qe0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FX7-4Z-qe0" id="al7-wK-Zm7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jMh-pR-ZpY" id="Y7b-aG-hwe"/>
+                            <outlet property="delegate" destination="jMh-pR-ZpY" id="6NH-I4-hru"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjS-Rm-nfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3436" y="-537"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="V44-TI-kKC">
+            <objects>
+                <navigationController id="vSp-eZ-B92" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" image="friendsBulletsList" id="Fe0-YY-axo">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bsc-Jm-ClG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bEv-aB-qqp" kind="relationship" relationship="rootViewController" id="7tO-XE-X4K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrC-zg-xiy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="-535"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="b42-36-5gI">
+            <objects>
+                <tabBarController id="MVq-g1-rtg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OIP-Rq-1aV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vSp-eZ-B92" kind="relationship" relationship="viewControllers" id="2dE-Re-gYZ"/>
+                        <segue destination="gIS-bT-qz5" kind="relationship" relationship="viewControllers" id="QRi-wC-Xko"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjt-PJ-0mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="38"/>
         </scene>
         <!--Reg New User View Controller-->
         <scene sceneID="guk-ws-Ckv">
@@ -345,7 +528,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTryAgain" id="BjP-tr-dYP"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueRepeatLogin" id="BjP-tr-dYP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Try Again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-Hj-ckx">
@@ -371,6 +554,10 @@
             <point key="canvasLocation" x="-350" y="819"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="friendsBulletsList" width="42" height="30"/>
+        <image name="iconCamera" width="48" height="36"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BjP-tr-dYP"/>
     </inferredMetricsTieBreakers>
