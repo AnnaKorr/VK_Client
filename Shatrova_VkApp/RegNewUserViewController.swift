@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RegNewUserViewController: UIViewController {
 
     @IBOutlet weak var userEmailTextField: UITextField!

@@ -6,21 +6,50 @@
 //  Copyright © 2017 Korona. All rights reserved.
 //
 
-import UIKit 
+import UIKit
+import VK_ios_sdk
+import Alamofire
 
-class LoginScreenViewController: UIViewController {
-
+class LoginScreenViewController: UIViewController, VKSdkDelegate {
+    
+    var vkScope = [VK_PER_EMAIL, VK_PER_FRIENDS, VK_PER_GROUPS]
+    
     @IBOutlet weak var customScrollView: UIScrollView!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
-   
+    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+        print(result)
+    }
+    
+    func vkSdkUserAuthorizationFailed() {
+        print("WOW VK")
+    }
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let myVkSdk = VKSdk.initialize(withAppId: "6196238")
+        myVkSdk?.register(self)
+
         let customHideKeyboard = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
         customScrollView.addGestureRecognizer(customHideKeyboard)
+        
 
+    }
+    
+    
+    @IBAction func existUserLogIn(_ sender: AnyObject) {
+        let loginUserEmailTextField = userEmailTextField.text!
+        let loginUserPasswordTextField = userEmailTextField.text!
+        
+        if (loginUserEmailTextField.isEmpty) || (loginUserPasswordTextField.isEmpty) {
+            loginCustomAlert(messageDisplay: "All fields are required.")
+        }
+        
+        VKSdk.authorize(vkScope)
+        
     }
     
     
@@ -54,15 +83,7 @@ class LoginScreenViewController: UIViewController {
     }
     
     
-    @IBAction func existUserLogIn(_ sender: UIButton) {
-        let loginUserEmailTextField = userEmailTextField.text!
-        let loginUserPasswordTextField = userEmailTextField.text!
-        
-        if (loginUserEmailTextField.isEmpty) || (loginUserPasswordTextField.isEmpty) {
-            loginCustomAlert(messageDisplay: "All fields are required.")
-        }
-        
-    }
+ 
     
     @objc func hideKeyboard() {
         self.customScrollView?.endEditing(true)
