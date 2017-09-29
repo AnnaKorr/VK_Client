@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      sourceApplication: String?,
                      annotation: Any) -> Bool {
         let boolDelegate: Bool = VKSdk.processOpen(url, fromApplication: sourceApplication)
+        VKSdk.initialize(withAppId: "6196238")
+        
         return boolDelegate
     }
     

@@ -20,12 +20,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ps1-gU-2b7"/>
+                        <segue destination="MVq-g1-rtg" kind="relationship" relationship="rootViewController" id="sR4-u1-Pq3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIj-is-29O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-948" y="16"/>
+            <point key="canvasLocation" x="-97" y="37"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -106,13 +106,12 @@
                                         </state>
                                         <connections>
                                             <action selector="existUserLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqf-84-CHX"/>
-                                            <segue destination="MVq-g1-rtg" kind="show" identifier="go2Tabbar" id="PDC-Uq-Zzl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-lj-DHb">
                                         <rect key="frame" x="147" y="372" width="81" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="lT9-bi-A41"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="lT9-bi-A41"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
@@ -167,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="60" y="1715"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Rga-US-7H3">
@@ -337,6 +336,7 @@
         <scene sceneID="b42-36-5gI">
             <objects>
                 <tabBarController id="MVq-g1-rtg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fdi-Gk-D1K"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OIP-Rq-1aV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -426,7 +426,7 @@
                                         <rect key="frame" x="147" y="351" width="81" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="QH0-RC-mtw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="QH0-RC-mtw"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -444,7 +444,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWw-RK-Yw8">
                                         <rect key="frame" x="108" y="421" width="158" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="158" id="x54-xa-bgL"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="x54-xa-bgL"/>
                                         </constraints>
                                         <state key="normal" title="I Have Account"/>
                                         <connections>
@@ -559,6 +559,6 @@
         <image name="iconCamera" width="48" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BjP-tr-dYP"/>
+        <segue reference="mSb-H7-zbI"/>
     </inferredMetricsTieBreakers>
 </document>
