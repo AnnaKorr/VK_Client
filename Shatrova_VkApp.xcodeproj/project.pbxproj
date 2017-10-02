@@ -33,7 +33,6 @@
 		184E47481F6AC3E6004DCF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184E474E1F6AC430004DCF15 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		184E47521F6C2AD6004DCF15 /* RegNewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegNewUserViewController.swift; sourceTree = "<group>"; };
-		187655B91F793556001B5C5E /* VK_ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VK_ios_sdk.framework; path = "Pods/../build/Debug-iphoneos/VK-ios-sdk/VK_ios_sdk.framework"; sourceTree = "<group>"; };
 		18D43D251F7BB37400B6DFF6 /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
 		18D43D271F7BC5EC00B6DFF6 /* AlbumsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListTableViewController.swift; sourceTree = "<group>"; };
 		18D43D291F7BE0DA00B6DFF6 /* ListOfListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfListTableViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		18047A641F71C05D0044B4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				187655B91F793556001B5C5E /* VK_ios_sdk.framework */,
 				18047A651F71C05D0044B4E5 /* Parse.framework */,
 				14BE7B19828BC5C9EFAA18FB /* Pods_Shatrova_VkApp.framework */,
 			);
@@ -191,15 +189,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Shatrova_VkApp/Pods-Shatrova_VkApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
-				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

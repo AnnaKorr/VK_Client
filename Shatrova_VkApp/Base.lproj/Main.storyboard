@@ -11,21 +11,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="kS5-6Y-Drt">
             <objects>
-                <navigationController id="ypc-ZW-eic" sceneMemberID="viewController">
+                <navigationController id="ypc-ZW-eic" customClass="UINavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ipY-Qf-Ysx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="MVq-g1-rtg" kind="relationship" relationship="rootViewController" id="sR4-u1-Pq3"/>
+                        <segue destination="MVq-g1-rtg" kind="relationship" relationship="rootViewController" id="V7i-Ng-wHL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIj-is-29O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="37"/>
+            <point key="canvasLocation" x="-28" y="37"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -336,7 +336,11 @@
         <scene sceneID="b42-36-5gI">
             <objects>
                 <tabBarController id="MVq-g1-rtg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="fdi-Gk-D1K"/>
+                    <navigationItem key="navigationItem" id="fdi-Gk-D1K">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="ReB-YT-dkh"/>
+                        <barButtonItem key="rightBarButtonItem" title="My Profile" id="8hn-A6-2Jq"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OIP-Rq-1aV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -7,31 +7,20 @@
 //
 
 import UIKit
-import VK_ios_sdk
 import Alamofire
 
-class LoginScreenViewController: UIViewController, VKSdkDelegate {
+class LoginScreenViewController: UIViewController {
     
-    var vkScope = [VK_PER_EMAIL, VK_PER_FRIENDS, VK_PER_GROUPS]
-    
+   
     @IBOutlet weak var customScrollView: UIScrollView!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
-    
-    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        print(result)
-    }
-    
-    func vkSdkUserAuthorizationFailed() {
-        print("WOW VK")
-    }
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myVkSdk = VKSdk.initialize(withAppId: "6196238")
-        myVkSdk?.register(self)
+        // let myVkSdk = VKSdk.initialize(withAppId: "6196238")
 
         let customHideKeyboard = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
         customScrollView.addGestureRecognizer(customHideKeyboard)
@@ -48,7 +37,7 @@ class LoginScreenViewController: UIViewController, VKSdkDelegate {
             loginCustomAlert(messageDisplay: "All fields are required.")
         }
         
-        VKSdk.authorize(vkScope)
+
         
     }
     
